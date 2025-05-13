@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Домашнее задание №38: Слайдер с FancyBox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OwlCarousel: Стили (локально) -->
+  <link rel="stylesheet" href="libs/owlcarousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="libs/owlcarousel/dist/assets/owl.theme.default.min.css">
+
+  <!-- FancyBox 3.5.7: Стили (локально) -->
+  <link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.min.css">
+
+  <!-- Свои стили -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🎞 ВИДЕО-ФОН -->
+  <video autoplay muted loop id="bg-video" poster="img/bg.jpg">
+    <source src="video/bg1.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <!-- 🎯 СЛАЙДЕР -->
+  <div class="slider-wrapper">
+    <div class="owl-carousel owl-theme">
+      <!-- КАРТИНКИ -->
+      <div class="item"><a href="img/0.jpg" data-fancybox="gallery"><img src="img/0.jpg" alt=""></a></div>
+      <div class="item"><a href="img/1.jpg" data-fancybox="gallery"><img src="img/1.jpg" alt=""></a></div>
+      <div class="item"><a href="img/2.jpg" data-fancybox="gallery"><img src="img/2.jpg" alt=""></a></div>
+      <div class="item"><a href="img/3.jpg" data-fancybox="gallery"><img src="img/3.jpg" alt=""></a></div>
+      <div class="item"><a href="img/4.jpg" data-fancybox="gallery"><img src="img/4.jpg" alt=""></a></div>
+      <div class="item"><a href="img/5.jpg" data-fancybox="gallery"><img src="img/5.jpg" alt=""></a></div>
+      <div class="item"><a href="img/6.jpg" data-fancybox="gallery"><img src="img/6.jpg" alt=""></a></div>
+      <div class="item"><a href="img/7.jpg" data-fancybox="gallery"><img src="img/7.jpg" alt=""></a></div>
+      <div class="item"><a href="img/8.jpg" data-fancybox="gallery"><img src="img/8.jpg" alt=""></a></div>
+      <div class="item"><a href="img/9.jpg" data-fancybox="gallery"><img src="img/9.jpg" alt=""></a></div>
+      <div class="item"><a href="img/10.jpg" data-fancybox="gallery"><img src="img/10.jpg" alt=""></a></div>
+      <div class="item"><a href="img/11.jpg" data-fancybox="gallery"><img src="img/11.jpg" alt=""></a></div>
+      <div class="item"><a href="img/12.jpg" data-fancybox="gallery"><img src="img/12.jpg" alt=""></a></div>
+      <div class="item"><a href="img/13.jpg" data-fancybox="gallery"><img src="img/13.jpg" alt=""></a></div>
+      <div class="item"><a href="img/14.jpg" data-fancybox="gallery"><img src="img/14.jpg" alt=""></a></div>
+      <div class="item"><a href="img/15.jpg" data-fancybox="gallery"><img src="img/15.jpg" alt=""></a></div>
+      <div class="item"><a href="img/16.jpg" data-fancybox="gallery"><img src="img/16.jpg" alt=""></a></div>
+      <div class="item"><a href="img/17.jpg" data-fancybox="gallery"><img src="img/17.jpg" alt=""></a></div>
+    </div>
+  </div>
+
+  <!-- 📜 JS библиотеки -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="libs/owlcarousel/dist/owl.carousel.min.js"></script>
+  <script src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
+

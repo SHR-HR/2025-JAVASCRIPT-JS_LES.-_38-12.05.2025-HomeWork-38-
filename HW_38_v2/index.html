@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Устанавливаем язык страницы — русский -->
+<head>
+  <meta charset="UTF-8" /> <!-- Кодировка для поддержки русских символов -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Домашнее задание №38: Слайдер с FancyBox - Вариант 2 - Слайдер OwlCarousel + FancyBox</title> <!-- Заголовок страницы -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <!-- ===========================
+       OwlCarousel: Стили (CDN)
+       ===========================
+       Подключаем стили карусели OwlCarousel.
+       Первый файл — основной стиль, второй — тема оформления.
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- ===========================
+       FancyBox: Стили (CDN)
+       ===========================
+       Подключаем стили для галереи FancyBox, чтобы можно было открывать изображения в модальном окне.
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+
+  <!-- ===========================
+       Пользовательские стили
+       ===========================
+       Подключаем наш собственный файл стилей style.css (в котором оформляется фон, контейнер и картинки).
+  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--
+    Обёртка слайдера — используется для стилизации и центрирования
+  -->
+  <div class="slider-wrapper">
+
+    <!--
+      Основной блок OwlCarousel — все элементы внутри него становятся слайдами.
+      Каждый <a> содержит изображение и ссылку на полноразмерное фото для FancyBox.
+      Используется API picsum.photos для получения случайных изображений.
+    -->
+    <div class="owl-carousel">
+
+      <!-- Картинка 1 -->
+      <a href="https://picsum.photos/800/600?random=1" data-fancybox="gallery">
+        <img src="https://picsum.photos/400/300?random=1" alt="img1">
+      </a>
+
+      <!-- Картинка 2 -->
+      <a href="https://picsum.photos/800/600?random=2" data-fancybox="gallery">
+        <img src="https://picsum.photos/400/300?random=2" alt="img2">
+      </a>
+
+      <!-- Картинка 3 -->
+      <a href="https://picsum.photos/800/600?random=3" data-fancybox="gallery">
+        <img src="https://picsum.photos/400/300?random=3" alt="img3">
+      </a>
+
+      <!-- Картинка 4 -->
+      <a href="https://picsum.photos/800/600?random=4" data-fancybox="gallery">
+        <img src="https://picsum.photos/400/300?random=4" alt="img4">
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ===========================
+       Подключение jQuery
+       ===========================
+       jQuery — обязательная библиотека для работы OwlCarousel и FancyBox.
+  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- ===========================
+       OwlCarousel: Скрипт (CDN)
+       ===========================
+       Плагин OwlCarousel для создания слайдера.
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- ===========================
+       FancyBox: Скрипт (CDN)
+       ===========================
+       Плагин FancyBox позволяет открывать изображения на весь экран в модальном окне.
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <!-- ===========================
+       Наш пользовательский JS
+       ===========================
+       В файле script.js будет инициализация слайдера и FancyBox.
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+

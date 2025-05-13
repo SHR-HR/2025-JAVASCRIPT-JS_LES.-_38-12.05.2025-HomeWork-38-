@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* === СБРОС === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #f0f0f0;
+}
+
+/* === ЭФФЕКТ ДОЖДЯ === */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://media.giphy.com/media/dI3D3BWfDub0Q/giphy.gif') repeat;
+  background-size: cover;
+  opacity: 0.08;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* === СЛАЙДЕР-КОНТЕЙНЕР === */
+.slider-wrapper {
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.05);
+  z-index: 10;
+  animation: slideDrop 1s ease;
+}
+
+.slider-wrapper::before {
+  content: "DEATH STRANDING";
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  font-size: 4rem;
+  opacity: 0.04;
+  z-index: 0;
+  color: #ffffff;
+  letter-spacing: 0.2rem;
+  pointer-events: none;
+}
+
+
+/* === АНИМАЦИЯ "ДОСТАВКИ" === */
+@keyframes slideDrop {
+  0% {
+    transform: translateY(-60px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* === ИЗОБРАЖЕНИЯ === */
+.owl-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: grayscale(0.1) brightness(0.9);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.owl-carousel a:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+/* === СТРЕЛКИ === */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.owl-nav button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 0.3s;
+  backdrop-filter: blur(3px);
+}
+
+.owl-nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.2);
+}
+
+/* === ТОЧКИ === */
+.owl-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+.owl-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: #555;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #00fff0;
+  box-shadow: 0 0 6px #00fff0;
+  transform: scale(1.2);
+}
+
+/* === FANCYBOX === */
+.fancybox__container {
+  --fancybox-color: #00fff0;
+  --fancybox-bg: rgba(0, 0, 0, 0.95);
+}
+
+
+
+

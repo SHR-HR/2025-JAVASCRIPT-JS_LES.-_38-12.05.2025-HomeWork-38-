@@ -1,0 +1,134 @@
+/* =============================================
+   CYBERPUNK 2077 - PHANTOM LIBERTY MAX STYLE
+================================================ */
+
+/* СБРОС */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ФОН */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(ellipse at center, #0f0c29, #302b63, #ff0055);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 2rem;
+}
+
+/* ОБЁРТКА С ГЛИТЧ-ЭФФЕКТОМ */
+.slider-wrapper {
+  max-width: 950px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow:
+    0 0 40px #0ff,
+    0 0 10px #ff00ff inset,
+    0 0 60px #00ffcc inset;
+  backdrop-filter: blur(10px);
+  position: relative;
+  animation: cyber-in 1s ease-out;
+  border: 2px solid #00fff0;
+}
+
+/* ГЛИТЧ-АНИМАЦИЯ БЛОКА */
+@keyframes cyber-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* ИЗОБРАЖЕНИЯ */
+.owl-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.owl-carousel a:hover img {
+  transform: scale(1.04);
+  box-shadow: 0 0 40px #00ffe1, 0 0 10px #0ff inset;
+}
+
+/* СТРЕЛКИ */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.owl-nav button {
+  background: linear-gradient(135deg, #ff00f7, #00fff0);
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 2rem;
+  border-radius: 12px;
+  pointer-events: all;
+  cursor: pointer;
+  box-shadow: 0 0 20px #0ff, 0 0 10px #ff00ff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.owl-nav button:hover {
+  transform: scale(1.2) rotate(2deg);
+  box-shadow: 0 0 30px #00f6ff;
+}
+
+/* ТОЧКИ */
+.owl-dots {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.owl-dot {
+  width: 14px;
+  height: 14px;
+  background: #555;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px #00fff0;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #00fff0;
+  transform: scale(1.4);
+  box-shadow: 0 0 12px #00fff0;
+}
+
+/* FANCYBOX */
+.fancybox__container {
+  --fancybox-color: #0ff;
+  --fancybox-bg: rgba(0, 0, 0, 0.95);
+}
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Устанавливаем язык документа -->
+<head>
+  <meta charset="UTF-8" /> <!-- Кодировка UTF-8 для поддержки русского языка -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Адаптивность на мобильных устройствах -->
+  <title>Telegram Clone</title> <!-- Название страницы во вкладке -->
+
+  <!-- === СТИЛИ === -->
+  <link rel="stylesheet" href="style.css" /> <!-- Подключение своего CSS-файла -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+  <!-- Стили для уведомлений (Toast) -->
+
+  <!-- === СКРИПТЫ И ПЛАГИНЫ === -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Подключаем jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/easytimer.js@4.4.0/dist/easytimer.min.js"></script> <!-- Таймер EasyTimer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> <!-- Уведомления Toast -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/inputmask.min.js"></script> <!-- Inputmask - базовая библиотека -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script> <!-- Inputmask - интеграция с jQuery -->
+</head>
+
+<body>
+
+  <!-- === ОСНОВНОЙ КОНТЕЙНЕР === -->
+  <div class="app-wrapper">
+
+    <!-- === ЛЕВАЯ СЕКЦИЯ: Контакты === -->
+    <aside class="contacts">
+      <h2>Контакты</h2>
+      <ul id="contacts-list"></ul> <!-- Здесь будет список контактов, подгруженный через JS -->
+    </aside>
+
+    <!-- === ЦЕНТРАЛЬНАЯ СЕКЦИЯ: Чат и таймер === -->
+    <main class="chat">
+      <h2>Центральная секция</h2>
+      <div id="chat-area"></div> <!-- Сюда будут выводиться "сообщения" от контакта -->
+      <div id="timer-display">00:00</div> <!-- Здесь отображается время звонка -->
+    </main>
+
+    <!-- === ПРАВАЯ СЕКЦИЯ: Набор номера === -->
+    <aside class="dialer">
+      <h2>Набор номера</h2>
+      <input type="text" id="phone-input" placeholder="+7(___)___-__-__" />
+      <!-- Поле для ввода номера телефона -->
+
+      <!-- === ЦИФРОВАЯ КЛАВИАТУРА === -->
+      <div id="keypad">
+        <!-- Каждая строка содержит по 3 кнопки, кроме последней -->
+        <div class="key-row">
+          <button class="key">1</button>
+          <button class="key">2</button>
+          <button class="key">3</button>
+        </div>
+        <div class="key-row">
+          <button class="key">4</button>
+          <button class="key">5</button>
+          <button class="key">6</button>
+        </div>
+        <div class="key-row">
+          <button class="key">7</button>
+          <button class="key">8</button>
+          <button class="key">9</button>
+        </div>
+        <div class="key-row">
+          <button class="key">0</button>
+        </div>
+      </div>
+
+      <!-- === КНОПКИ ДЕЙСТВИЙ === -->
+      <button id="call-btn">📞 Позвонить</button> <!-- Кнопка начала звонка -->
+      <button id="end-btn" class="end">❌ Завершить</button> <!-- Кнопка завершения звонка -->
+    </aside>
+  </div>
+
+  <!-- === ПОДКЛЮЧЕНИЕ ОСНОВНОГО СКРИПТА === -->
+  <script src="script.js"></script> <!-- Весь функционал реализован здесь -->
+</body>
+</html>
+
+

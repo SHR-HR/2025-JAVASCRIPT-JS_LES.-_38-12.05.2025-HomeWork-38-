@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+/* ===== ОСНОВА ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ===== ВИДЕО ФОН ===== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  /* filter: none; */
+  filter: brightness(1.0) contrast(1.1) saturate(1.2);
+  /* filter: brightness(0.25) contrast(1.35) saturate(1.6); */
+  pointer-events: none;
+}
+
+/* ===== ОБЁРТКА СЛАЙДЕРА ===== */
+.slider-wrapper {
+  width: 90vw;
+  max-width: 1080px;
+  height: auto;
+  margin: 5vh auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 0, 255, 0.35);
+  border-radius: 20px;
+  backdrop-filter: blur(14px) brightness(1.2);
+  box-shadow: 0 0 80px rgba(255, 0, 255, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== ВНУТРЕННИЙ СЛАЙДЕР ===== */
+/* ВАЖНО: удаляем паддинг и flex — это ломает расчёт ширины! */
+.owl-carousel {
+  width: 100%;
+}
+
+/* ===== ЭЛЕМЕНТ КАРТИНКИ ===== */
+.owl-carousel .item {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== КАРТИНКА ===== */
+.owl-carousel img {
+  display: block;
+  width: 100%;
+  max-height: 60vh;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(255, 105, 180, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.owl-carousel img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== СТРЕЛКИ ===== */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.owl-nav button {
+  pointer-events: all;
+  background: rgba(255, 105, 180, 0.2);
+  border: 3px solid #ff00ff;
+  color: #fff;
+  font-size: 36px;
+  padding: 16px 18px;
+  border-radius: 50%;
+  text-shadow: 0 0 6px #ff00ff;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.owl-nav button:hover {
+  background: rgba(255, 20, 147, 0.5);
+  box-shadow: 0 0 40px #ff00ff;
+}
+
+.owl-prev span::before { content: '❮'; }
+.owl-next span::before { content: '❯'; }
+
+/* ===== ТОЧКИ ===== */
+.owl-dots {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.owl-dot {
+  width: 14px;
+  height: 14px;
+  margin: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  transition: 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #ff00ff;
+  box-shadow: 0 0 10px #ff00ff, 0 0 18px #ff00ff;
+}
+
+/* ===== FANCYBOX: VICE CITY STYLING ===== */
+.fancybox-bg {
+  background: rgba(0, 0, 0, 0.97);
+}
+
+.fancybox-slide--image {
+  padding: 0 !important;
+}
+
+.fancybox-image {
+  border-radius: 18px !important;
+  box-shadow: 0 0 60px rgba(255, 0, 255, 0.6) !important;
+  outline: none !important;
+  object-fit: contain;
+  max-width: 94vw;
+  max-height: 86vh;
+  transition: all 0.4s ease;
+}
+
+.fancybox-inner {
+  border-radius: 22px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 80px rgba(255, 0, 255, 0.45);
+}
+
+.fancybox-navigation .fancybox-button {
+  background: rgba(255, 20, 147, 0.35) !important;
+  color: #fff !important;
+  font-size: 30px;
+  border-radius: 50% !important;
+  box-shadow: 0 0 25px #ff69b4 !important;
+  width: 50px;
+  height: 50px;
+}
+
+.fancybox-button--close {
+  background: rgba(255, 0, 255, 0.45) !important;
+  top: 10px !important;
+  right: 10px !important;
+  box-shadow: 0 0 25px #ff00ff !important;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    width: 92vw;
+    padding: 18px;
+    margin: 4vh auto;
+  }
+
+  .owl-carousel img {
+    height: 50vh;
+  }
+
+  .owl-nav button {
+    font-size: 24px;
+    padding: 10px 12px;
+  }
+
+  .owl-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
